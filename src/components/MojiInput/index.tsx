@@ -33,6 +33,11 @@ function MojiInput( props:MojiInputProps ) {
             onClick={() => toggleSelection()}
         >
             <img
+                style={{
+                    transition: "width 0.2s, height 0.2s",
+                    transitionTimingFunction: "ease-in-out",
+                    zIndex: 9999
+                }}
                 src={props.src}
                 width={selected ? 12 : props.width}
                 height={selected ? 12 : props.height}
@@ -45,7 +50,7 @@ function MojiInput( props:MojiInputProps ) {
                 justifyContent: "center",
                 fontSize: 20,
                 fontWeight: 800,
-                marginTop: -5,
+                marginTop: -10,
                 color: "#0066FF",
             }}>
                 <p className={inter.className}>{props.answer}</p>
